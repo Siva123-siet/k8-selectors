@@ -11,7 +11,7 @@ spec:
     imagePullPolicy: Always
   nodeSelector:
     disktype: ssd
-  tolerations:
+  tolerations: # When node is tainted pod goes to pending state.Toleration will bring back pod to running state
   - key: "key1"
     operator: "Equal"
     value: "value1"
